@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Projects</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0f1117;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #888;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #1a1d27;
+      border: 1px solid #2a2d3a;
+      border-radius: 14px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #444;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #252836;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-weight: 500;
+      margin-top: 2px;
+      display: inline-block;
+    }
+
+    .tag-streamlit { background: #ff4b4b22; color: #ff6b6b; border: 1px solid #ff4b4b44; }
+    .tag-github    { background: #ffffff15; color: #aaa; border: 1px solid #ffffff22; }
+    .tag-notion    { background: #ffffff15; color: #aaa; border: 1px solid #ffffff22; }
+    .tag-smarthome { background: #00c3ff22; color: #5dd5f7; border: 1px solid #00c3ff44; }
+
+    .card-desc {
+      font-size: 0.875rem;
+      color: #888;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .card-link {
+      font-size: 0.8rem;
+      color: #555;
+      word-break: break-all;
+      margin-top: auto;
+      padding-top: 8px;
+      border-top: 1px solid #2a2d3a;
+    }
+
+    .card-link span {
+      color: #4a9eff;
+    }
+
+    .section-label {
+      max-width: 1100px;
+      margin: 0 auto 12px;
+      font-size: 0.75rem;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+
+    .section-label:not(:first-child) {
+      margin-top: 36px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Projects</h1>
+    <p>個人プロジェクトまとめ</p>
+  </header>
+
+  <div class="section-label">Apps & Tools</div>
+
+  <div class="grid">
+
+    <a class="card" href="https://text-ai-jfoml8sebfcpjrjn8zuqq9.streamlit.app/" target="_blank" rel="noopener">
+      <div class="card-header">
+        <div class="card-icon">🤖</div>
+        <div>
+          <div class="card-title">Text AI App</div>
+          <span class="card-tag tag-streamlit">Streamlit</span>
+        </div>
+      </div>
+      <div class="card-desc">
+        Streamlitで作ったAIテキストアプリ。自然言語処理を使ったWebアプリ。
+      </div>
+      <div class="card-link"><span>↗</span> text-ai-jfoml8sebfcpjrjn8zuqq9.streamlit.app</div>
+    </a>
+
+    <a class="card" href="#" onclick="alert('Smart Home のURLを追加してください'); return false;">
+      <div class="card-header">
+        <div class="card-icon">🏠</div>
+        <div>
+          <div class="card-title">Smart Home</div>
+          <span class="card-tag tag-smarthome">IoT</span>
+        </div>
+      </div>
+      <div class="card-desc">
+        自作スマートホームシステム。センサーやデバイスの管理・自動化。
+      </div>
+      <div class="card-link"><span>↗</span> URLを追加してください</div>
+    </a>
+
+  </div>
+
+  <div class="section-label" style="margin-top: 36px;">Workspace</div>
+
+  <div class="grid">
+
+    <a class="card" href="https://github.com/" target="_blank" rel="noopener">
+      <div class="card-header">
+        <div class="card-icon">🐙</div>
+        <div>
+          <div class="card-title">GitHub</div>
+          <span class="card-tag tag-github">Code</span>
+        </div>
+      </div>
+      <div class="card-desc">
+        ソースコード管理。個人リポジトリ、プロジェクト一覧。
+      </div>
+      <div class="card-link"><span>↗</span> github.com</div>
+    </a>
+
+    <a class="card" href="https://www.notion.so/library/recents?spaceId=a9e8135b49004bbca545444bdc2c7427" target="_blank" rel="noopener">
+      <div class="card-header">
+        <div class="card-icon">📝</div>
+        <div>
+          <div class="card-title">Notion</div>
+          <span class="card-tag tag-notion">Notes</span>
+        </div>
+      </div>
+      <div class="card-desc">
+        メモ・ドキュメント管理。プロジェクトのメモや計画をまとめている。
+      </div>
+      <div class="card-link"><span>↗</span> notion.so</div>
+    </a>
+
+  </div>
+
+</body>
+</html>
